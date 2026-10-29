@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AMEB · Asociación Mexicana de Endoscopía Bariátrica</title>
+  <meta name="description" content="La Asociación Mexicana de Endoscopía Bariátrica (AMEB) impulsa la educación, la innovación y la excelencia en el tratamiento endoscópico de la obesidad en México.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- ===== Iconos (sprite SVG) ===== -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <symbol id="logo" viewBox="0 0 64 64">
+        <circle cx="32" cy="32" r="30" fill="#0e3558" stroke="#c39a4a" stroke-width="3"/>
+        <circle cx="32" cy="32" r="23.5" fill="none" stroke="#2f6390" stroke-width="1.5"/>
+        <path d="M23 19h10a13 13 0 0 1 0 26H23" fill="none" stroke="#c39a4a" stroke-width="3" stroke-linecap="round"/>
+        <path d="M29 13v34" stroke="#e3c27f" stroke-width="2.4" stroke-linecap="round"/>
+        <circle cx="29" cy="49" r="2.6" fill="#e3c27f"/>
+        <path d="M36 26c3 1.5 4.5 3.6 4.5 6s-1.5 4.5-4.5 6" fill="none" stroke="#6e93b8" stroke-width="1.8" stroke-linecap="round"/>
+      </symbol>
+    </defs>
+    <symbol id="i-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="i-arrow-left" viewBox="0 0 24 24"><path d="M19 12H5M11 6l-6 6 6 6"/></symbol>
+    <symbol id="i-book" viewBox="0 0 24 24"><path d="M2 5.5C4.5 4 8 4 12 6c4-2 7.5-2 10-.5V19c-2.5-1.5-6-1.5-10 .5-4-2-7.5-2-10-.5Z"/><path d="M12 6v13.5"/></symbol>
+    <symbol id="i-heart-hand" viewBox="0 0 24 24"><path d="M12 15.5s-6-3.7-6-8.3A3.4 3.4 0 0 1 12 5a3.4 3.4 0 0 1 6 2.2c0 4.6-6 8.3-6 8.3Z"/><path d="M9.5 9.5h1.5l1-1.5 1.2 3 .8-1.5h1.5"/><path d="M4 21l3-3.5h5l2.5-2"/></symbol>
+    <symbol id="i-person-badge" viewBox="0 0 24 24"><rect x="4.5" y="3" width="15" height="18" rx="2"/><circle cx="12" cy="10" r="3"/><path d="M8 18a4 4 0 0 1 8 0"/><path d="M10 3v2h4V3"/></symbol>
+    <symbol id="i-lecture" viewBox="0 0 24 24"><circle cx="12" cy="5" r="2.6"/><path d="M7.5 13a4.5 4.5 0 0 1 9 0"/><path d="M3 13h18M5 13v8M19 13v8M9 17h6"/></symbol>
+    <symbol id="i-handson" viewBox="0 0 24 24"><path d="M15 3.5l5.5 5.5-6.5 6.5-5.5-5.5Z"/><path d="M11.3 12.3 6 17.6a2 2 0 0 0 0 2.8 2 2 0 0 0 2.8 0l5.3-5.3"/><path d="M17.5 6.5 21 3"/><path d="M3 21l2-2"/><path d="M8.5 10 7 8.5"/></symbol>
+    <symbol id="i-monitor" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="13" rx="1.5"/><path d="M8 21h8M12 17v4"/></symbol>
+    <symbol id="i-users" viewBox="0 0 24 24"><circle cx="12" cy="7" r="3"/><circle cx="5" cy="9" r="2.2"/><circle cx="19" cy="9" r="2.2"/><path d="M6.5 20v-1.5a5.5 5.5 0 0 1 11 0V20"/><path d="M1.5 19v-.8A3.6 3.6 0 0 1 5 14.5h.6"/><path d="M22.5 19v-.8a3.6 3.6 0 0 0-3.5-3.7h-.6"/></symbol>
+    <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/><path d="M7.5 14h1M11.5 14h1M15.5 14h1M7.5 17.5h1M11.5 17.5h1"/></symbol>
+    <symbol id="i-doc" viewBox="0 0 24 24"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8Z"/><path d="M14 3v5h5M9 13h6M9 17h6M9 9h2"/></symbol>
+    <symbol id="i-badge" viewBox="0 0 24 24"><path d="M12 2.5l2.3 2 3.1-.3.7 3 2.7 1.6-1.2 2.8 1.2 2.8-2.7 1.6-.7 3-3.1-.3-2.3 2-2.3-2-3.1.3-.7-3-2.7-1.6 1.2-2.8-1.2-2.8 2.7-1.6.7-3 3.1.3Z"/><circle cx="12" cy="12" r="3.5"/></symbol>
+    <symbol id="i-network" viewBox="0 0 24 24"><circle cx="12" cy="5" r="2.5"/><circle cx="5" cy="18" r="2.5"/><circle cx="19" cy="18" r="2.5"/><path d="M10.8 7.2 6.2 15.8M13.2 7.2l4.6 8.6M7.5 18h9"/></symbol>
+    <symbol id="i-certificate" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="13" rx="1.5"/><path d="M7 8h10M7 11h5"/><circle cx="16" cy="14" r="2.5"/><path d="M14.6 16.1 14 20.5l2-1 2 1-.6-4.4"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h3.5l2 5-2.4 1.5a11 11 0 0 0 5.4 5.4L15 13.5l5 2V19a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5a7 7 0 0 1 14 0C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></symbol>
+    <symbol id="i-linkedin" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 10.5V17M8 7.5v.01M12 17v-6.5M12 13.5a2.5 2.5 0 0 1 5 0V17"/></symbol>
+    <symbol id="i-instagram" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/></symbol>
+    <symbol id="i-youtube" viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="4"/><path d="m10 9 5 3-5 3Z"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
+  </svg>
+
+  <!-- ===== Encabezado ===== -->
+  <header class="site-header" id="top">
+    <div class="container header__inner">
+      <a href="#inicio" class="brand" aria-label="AMEB, ir al inicio">
+        <svg class="brand__logo"><use href="#logo"/></svg>
+        <span class="brand__text">
+          <span class="brand__name">AMEB</span>
+          <span class="brand__tag">Asociación Mexicana de<br>Endoscopía Bariátrica</span>
+        </span>
+      </a>
+
+      <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="main-nav">
+        <svg class="icon"><use href="#i-menu"/></svg>
+      </button>
+
+      <nav class="main-nav" id="main-nav" aria-label="Principal">
+        <ul class="nav__list">
+          <li><a href="#inicio" class="nav__link">Inicio</a></li>
+          <li><a href="#nosotros" class="nav__link">Nosotros</a></li>
+          <li><a href="#membresia" class="nav__link">Membresía</a></li>
+          <li><a href="#cebe" class="nav__link">CEBE</a></li>
+          <li><a href="#recursos" class="nav__link">Recursos</a></li>
+          <li><a href="#contacto" class="nav__link">Contacto</a></li>
+        </ul>
+        <button class="btn btn--gold btn--sm" data-open="dlg-membresia">Membresía</button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===== Hero ===== -->
+    <section class="hero" id="inicio">
+      <div class="hero__media">
+        <img src="img/hero-endoscopio.jpg" alt="Médico sosteniendo un endoscopio en quirófano">
+      </div>
+      <div class="container hero__content">
+        <h1 class="hero__title reveal">
+          Impulsando el futuro de la endoscopía bariátrica <em>en México</em>
+        </h1>
+        <p class="hero__lead reveal">
+          Una comunidad médica comprometida con la educación, la innovación y la excelencia en el tratamiento de la obesidad.
+        </p>
+        <a href="#nosotros" class="btn btn--gold reveal">
+          Conoce más <svg class="icon icon--sm"><use href="#i-arrow-right"/></svg>
+        </a>
+
+        <ul class="hero__features reveal">
+          <li class="hero__feature">
+            <span class="icon-ring"><svg class="icon"><use href="#i-book"/></svg></span>
+            <span>Educación<br>médica continua</span>
+          </li>
+          <li class="hero__feature">
+            <span class="icon-ring"><svg class="icon"><use href="#i-heart-hand"/></svg></span>
+            <span>Colaboración<br>profesional</span>
+          </li>
+          <li class="hero__feature">
+            <span class="icon-ring"><svg class="icon"><use href="#i-person-badge"/></svg></span>
+            <span>Innovación<br>y mejores resultados</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== Sobre AMEB ===== -->
+    <section class="section about" id="nosotros">
+      <div class="container about__grid">
+        <div class="about__text">
+          <h2 class="section-title reveal">¿Qué es <span class="accent-blue">AMEB</span>?</h2>
+          <p class="reveal">
+            La Asociación Mexicana de Endoscopía Bariátrica (AMEB) es una organización profesional dedicada a promover el desarrollo, la educación, la investigación y la integración segura y eficaz de las terapias endoscópicas bariátricas y metabólicas en la práctica clínica.
+          </p>
+          <p class="reveal">
+            Reunimos a médicos endoscopistas, cirujanos bariatras y otros especialistas comprometidos con el avance de esta disciplina, con el objetivo de mejorar la calidad de los tratamientos y los resultados clínicos de los pacientes.
+          </p>
+          <button class="btn btn--outline reveal" data-open="dlg-mision">
+            Nuestra misión <svg class="icon icon--sm"><use href="#i-arrow-right"/></svg>
+          </button>
+        </div>
+
+        <div class="about__media reveal">
+          <span class="ring ring--1"></span>
+          <span class="ring ring--2"></span>
+          <div class="about__circle">
+            <img src="img/ameb-endoscopio.jpg" alt="Manos con guantes azules sosteniendo un endoscopio">
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <ul class="pillars">
+          <li class="pillar reveal"><h3>Educación</h3><span>Continua</span></li>
+          <li class="pillar reveal"><h3>Innovación</h3><span>Clínica</span></li>
+          <li class="pillar reveal"><h3>Comunidad</h3><span>Especializada</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== Consejo directivo ===== -->
+    <section class="section board" id="consejo">
+      <div class="container">
+        <div class="board__head">
+          <div>
+            <h2 class="section-title reveal">Liderazgo para<br>seguir <em>avanzando</em></h2>
+            <p class="section-lead reveal">Un grupo de especialistas comprometidos con el desarrollo de la endoscopía bariátrica en México.</p>
+          </div>
+          <div class="carousel__controls">
+            <button class="carousel__btn" data-dir="-1" aria-label="Anterior"><svg class="icon icon--sm"><use href="#i-arrow-left"/></svg></button>
+            <button class="carousel__btn" data-dir="1" aria-label="Siguiente"><svg class="icon icon--sm"><use href="#i-arrow-right"/></svg></button>
+          </div>
+        </div>
+
+        <div class="carousel" tabindex="0" aria-label="Integrantes del consejo directivo">
+          <article class="member-card reveal">
+            <div class="member-card__photo" data-initials="CQ">
+              <img src="img/dr-cesar-quiroz.jpg" alt="Dr. César David Quiroz Guadarrama">
+            </div>
+            <div class="member-card__body">
+              <h3>Dr. César David<br>Quiroz Guadarrama</h3>
+              <p>Presidente</p>
+            </div>
+          </article>
+
+          <article class="member-card reveal">
+            <div class="member-card__photo" data-initials="MR">
+              <img src="img/dr-martin-rojano.jpg" alt="Dr. Martín Edgardo Rojano Rodríguez">
+            </div>
+            <div class="member-card__body">
+              <h3>Dr. Martín Edgardo<br>Rojano Rodríguez</h3>
+              <p>Vicepresidente</p>
+            </div>
+          </article>
+
+          <article class="member-card member-card--soon reveal">
+            <svg class="icon icon--xl"><use href="#i-users"/></svg>
+            <p>Próximamente el resto de los integrantes del Consejo Directivo.</p>
+            <button class="btn btn--outline btn--sm" data-open="dlg-consejo">
+              Conocer más <svg class="icon icon--sm"><use href="#i-arrow-right"/></svg>
+            </button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Membresía ===== -->
+    <section class="section membership" id="membresia">
+      <div class="container">
+        <div class="membership__head">
+          <div>
+            <h2 class="section-title section-title--light reveal">Beneficios de formar<br>parte de <em>AMEB</em></h2>
+            <p class="section-lead section-lead--light reveal">Únete a una comunidad de especialistas comprometidos con la excelencia, la educación y la innovación.</p>
+          </div>
+          <button class="btn btn--gold reveal" data-open="dlg-membresia">
+            Quiero ser miembro <svg class="icon icon--sm"><use href="#i-arrow-right"/></svg>
+          </button>
+        </div>
+
+        <ul class="benefits">
+          <li class="benefit reveal"><svg class="icon icon--lg"><use href="#i-book"/></svg><span>Educación<br>médica continua</span></li>
+          <li class="benefit reveal"><svg class="icon icon--lg"><use href="#i-users"/></svg><span>Comunidad<br>especializada</span></li>
+          <li class="benefit reveal"><svg class="icon icon--lg"><use href="#i-calendar"/></svg><span>Acceso a cursos<br>y eventos académicos</span></li>
+          <li class="benefit reveal"><svg class="icon icon--lg"><use href="#i-doc"/></svg><span>Actualización<br>científica</span></li>
+          <li class="benefit reveal"><svg class="icon icon--lg"><use href="#i-badge"/></svg><span>Recursos clínicos<br>y académicos</span></li>
+          <li class="benefit reveal"><svg class="icon icon--lg"><use href="#i-network"/></svg><span>Oportunidades<br>de colaboración</span></li>
+          <li class="benefit reveal"><svg class="icon icon--lg"><use href="#i-certificate"/></svg><span>Certificado<br>de membresía</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== CEBE 2026 ===== -->
+    <section class="split cebe" id="cebe">
+      <div class="container">
+        <div class="split__content">
+          <h2 class="cebe__title reveal">CEBE <em>2026</em></h2>
+          <p class="cebe__subtitle reveal">Curso de Endoscopía Bariátrica Efectiva</p>
+          <p class="split__lead reveal">
+            El encuentro académico de la Asociación Mexicana de Endoscopía Bariátrica, dedicado a la formación, actualización y entrenamiento práctico.
+          </p>
+
+          <ul class="cebe__meta reveal">
+            <li>
+              <svg class="icon icon--lg icon--gold"><use href="#i-calendar"/></svg>
+              <span>7 al 9 de<br>noviembre de 2026</span>
+            </li>
+            <li>
+              <svg class="icon icon--lg icon--gold"><use href="#i-pin"/></svg>
+              <span>Hermosillo,<br>Sonora, México</span>
+            </li>
+          </ul>
+
+          <p class="countdown reveal" id="countdown" aria-live="polite"></p>
+
+          <button class="btn btn--gold reveal" data-open="dlg-cebe">
+            Más información <svg class="icon icon--sm"><use href="#i-arrow-right"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="split__media split__media--city">
+        <img src="img/hermosillo.jpg" alt="Catedral de Hermosillo y Cerro de la Campana al atardecer">
+      </div>
+      <span class="split__arc" aria-hidden="true"></span>
+    </section>
+
+    <section class="cebe-highlights">
+      <div class="container">
+        <ul class="highlights">
+          <li class="highlight reveal"><svg class="icon icon--xl"><use href="#i-lecture"/></svg><span>Sesiones<br>magistrales</span></li>
+          <li class="highlight reveal"><svg class="icon icon--xl"><use href="#i-handson"/></svg><span>Entrenamiento<br>Hands-On</span></li>
+          <li class="highlight reveal"><svg class="icon icon--xl"><use href="#i-monitor"/></svg><span>Casos en<br>quirófano</span></li>
+          <li class="highlight reveal"><svg class="icon icon--xl"><use href="#i-users"/></svg><span>Intercambio<br>de experiencias</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== Recursos académicos ===== -->
+    <section class="section resources" id="recursos">
+      <div class="container resources__grid">
+        <div>
+          <h2 class="section-title reveal">Conocimiento que impulsa<br>nuevas <em>oportunidades</em></h2>
+          <p class="section-lead reveal">Accede a publicaciones, recomendaciones, revisiones científicas y materiales educativos sobre endoscopía bariátrica y metabólica.</p>
+          <button class="btn btn--outline reveal" data-open="dlg-recursos">
+            Explorar recursos <svg class="icon icon--sm"><use href="#i-arrow-right"/></svg>
+          </button>
+        </div>
+
+        <div class="papers reveal" aria-hidden="true">
+          <div class="paper paper--back">
+            <span class="paper__lines"></span>
+          </div>
+          <div class="paper paper--front">
+            <span class="paper__kicker">Review</span>
+            <span class="paper__title">Endoscopic Bariatric Therapies</span>
+            <span class="paper__img"></span>
+            <span class="paper__lines paper__lines--short"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Contacto ===== -->
+    <section class="split contact" id="contacto">
+      <div class="container">
+        <div class="split__content">
+          <h2 class="section-title section-title--xl reveal">Hablemos</h2>
+          <p class="split__lead reveal">
+            Si tienes alguna pregunta sobre la membresía, el curso anual o nuestras actividades académicas, será un gusto atenderte.
+          </p>
+
+          <ul class="contact__list">
+            <li class="reveal">
+              <span class="icon-ring icon-ring--light"><svg class="icon"><use href="#i-mail"/></svg></span>
+              <span><small>Correo electrónico</small><a href="mailto:info@ameb.org.mx">info@ameb.org.mx</a></span>
+            </li>
+            <li class="reveal">
+              <span class="icon-ring icon-ring--light"><svg class="icon"><use href="#i-phone"/></svg></span>
+              <span><small>Teléfono</small><a href="tel:+526624209531">+52 662 420 9531</a></span>
+            </li>
+            <li class="reveal">
+              <span class="icon-ring icon-ring--light"><svg class="icon"><use href="#i-pin"/></svg></span>
+              <span><small>Ubicación</small><a href="https://maps.google.com/?q=Hermosillo,+Sonora,+México" target="_blank" rel="noopener">Hermosillo, Sonora, México</a></span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="split__media split__media--or">
+        <img src="img/quirofano.jpg" alt="Especialistas realizando un procedimiento endoscópico">
+      </div>
+      <span class="split__arc split__arc--low" aria-hidden="true"></span>
+    </section>
+  </main>
+
+  <!-- ===== Pie de página ===== -->
+  <footer class="site-footer">
+    <div class="container footer__top">
+      <a href="#inicio" class="brand brand--light" aria-label="AMEB, ir al inicio">
+        <svg class="brand__logo"><use href="#logo"/></svg>
+        <span class="brand__text">
+          <span class="brand__name">AMEB</span>
+          <span class="brand__tag">Asociación Mexicana de<br>Endoscopía Bariátrica</span>
+        </span>
+      </a>
+      <nav aria-label="Pie de página">
+        <ul class="footer__nav">
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#nosotros">Nosotros</a></li>
+          <li><a href="#membresia">Membresía</a></li>
+          <li><a href="#cebe">CEBE</a></li>
+          <li><a href="#recursos">Recursos</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+      <div class="footer__social">
+        <a href="#" aria-label="LinkedIn"><svg class="icon"><use href="#i-linkedin"/></svg></a>
+        <a href="#" aria-label="Instagram"><svg class="icon"><use href="#i-instagram"/></svg></a>
+        <a href="#" aria-label="YouTube"><svg class="icon"><use href="#i-youtube"/></svg></a>
+      </div>
+    </div>
+    <div class="container footer__bottom">
+      <p>© <span id="year">2026</span> Asociación Mexicana de Endoscopía Bariátrica. Todos los derechos reservados.</p>
+      <p class="footer__legal"><a href="#">Aviso de privacidad</a><span>|</span><a href="#">Términos de uso</a></p>
+    </div>
+  </footer>
+
+  <!-- ===== Ventanas modales ===== -->
+  <dialog class="modal" id="dlg-mision">
+    <button class="modal__close" data-close aria-label="Cerrar"><svg class="icon"><use href="#i-close"/></svg></button>
+    <h3 class="modal__title">Mejores tratamientos, <em>mejores resultados</em></h3>
+    <p>Promover la formación, la investigación y la práctica segura de la endoscopía bariátrica y metabólica en México, integrando a especialistas de distintas disciplinas para ofrecer a los pacientes con obesidad tratamientos eficaces, basados en evidencia y centrados en la persona.</p>
+    <ul class="modal__list">
+      <li>Educación médica continua de alto nivel.</li>
+      <li>Impulso a la investigación clínica nacional.</li>
+      <li>Estándares de calidad y seguridad en los procedimientos.</li>
+    </ul>
+  </dialog>
+
+  <dialog class="modal" id="dlg-consejo">
+    <button class="modal__close" data-close aria-label="Cerrar"><svg class="icon"><use href="#i-close"/></svg></button>
+    <h3 class="modal__title">Muy pronto <em>más integrantes</em></h3>
+    <p>Estamos integrando al resto del Consejo Directivo 2026. Publicaremos aquí sus perfiles en cuanto se confirmen los cargos.</p>
+    <p>Si deseas participar en los comités de la asociación, escríbenos a <a href="mailto:info@ameb.org.mx">info@ameb.org.mx</a>.</p>
+  </dialog>
+
+  <dialog class="modal" id="dlg-cebe">
+    <button class="modal__close" data-close aria-label="Cerrar"><svg class="icon"><use href="#i-close"/></svg></button>
+    <h3 class="modal__title">Curso de Endoscopía <em>Bariátrica Efectiva</em></h3>
+    <ul class="modal__agenda">
+      <li><strong>Sáb 7 nov</strong><span>Sesiones magistrales y mesas de discusión.</span></li>
+      <li><strong>Dom 8 nov</strong><span>Entrenamiento Hands-On con modelos y simuladores.</span></li>
+      <li><strong>Lun 9 nov</strong><span>Casos en vivo desde quirófano e intercambio de experiencias.</span></li>
+    </ul>
+    <p>Sede: Hermosillo, Sonora, México. Para registro y costos escribe a <a href="mailto:info@ameb.org.mx?subject=Registro%20CEBE%202026">info@ameb.org.mx</a>.</p>
+  </dialog>
+
+  <dialog class="modal" id="dlg-recursos">
+    <button class="modal__close" data-close aria-label="Cerrar"><svg class="icon"><use href="#i-close"/></svg></button>
+    <h3 class="modal__title">Biblioteca <em>AMEB</em></h3>
+    <ul class="modal__list">
+      <li>Publicaciones y revisiones científicas.</li>
+      <li>Recomendaciones y guías clínicas.</li>
+      <li>Materiales educativos y grabaciones de sesiones.</li>
+    </ul>
+    <p>El acceso completo está disponible para miembros de la asociación.</p>
+    <button class="btn btn--gold btn--sm" data-open="dlg-membresia">Quiero ser miembro</button>
+  </dialog>
+
+  <dialog class="modal" id="dlg-membresia">
+    <button class="modal__close" data-close aria-label="Cerrar"><svg class="icon"><use href="#i-close"/></svg></button>
+    <h3 class="modal__title">Solicita tu <em>membresía</em></h3>
+    <p>Déjanos tus datos y te enviaremos la información para formar parte de AMEB.</p>
+    <form class="form" id="membership-form" novalidate>
+      <label>Nombre completo
+        <input type="text" name="nombre" required autocomplete="name">
+      </label>
+      <label>Especialidad
+        <select name="especialidad" required>
+          <option value="">Selecciona una opción</option>
+          <option>Endoscopía</option>
+          <option>Cirugía bariátrica</option>
+          <option>Gastroenterología</option>
+          <option>Otra especialidad</option>
+        </select>
+      </label>
+      <div class="form__row">
+        <label>Correo electrónico
+          <input type="email" name="correo" required autocomplete="email">
+        </label>
+        <label>Teléfono
+          <input type="tel" name="telefono" autocomplete="tel">
+        </label>
+      </div>
+      <p class="form__error" role="alert" hidden>Completa nombre, especialidad y un correo válido.</p>
+      <button type="submit" class="btn btn--gold">
+        Enviar solicitud <svg class="icon icon--sm"><use href="#i-arrow-right"/></svg>
+      </button>
+    </form>
+  </dialog>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

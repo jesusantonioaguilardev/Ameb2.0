@@ -1,0 +1,9 @@
+Coloca aquí las fotografías del sitio con estos nombres exactos.
+Si falta alguna, la página muestra un fondo de color en su lugar.
+
+hero-endoscopio.jpg    Portada: médico sosteniendo un endoscopio (horizontal, ~1920x1100)
+ameb-endoscopio.jpg    Sección "¿Qué es AMEB?": manos con guantes y endoscopio (cuadrada, ~900x900)
+dr-cesar-quiroz.jpg    Foto del Presidente (horizontal 4:3)
+dr-martin-rojano.jpg   Foto del Vicepresidente (horizontal 4:3)
+hermosillo.jpg         Sección CEBE: Catedral de Hermosillo / Cerro de la Campana (vertical, ~900x1100)
+quirofano.jpg          Sección Contacto: especialistas en quirófano (vertical, ~900x1100)
