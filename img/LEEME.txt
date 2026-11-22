@@ -7,3 +7,10 @@ dr-cesar-quiroz.jpg    Foto del Presidente (horizontal 4:3)
 dr-martin-rojano.jpg   Foto del Vicepresidente (horizontal 4:3)
 hermosillo.jpg         Sección CEBE: Catedral de Hermosillo / Cerro de la Campana (vertical, ~900x1100)
 quirofano.jpg          Sección Contacto: especialistas en quirófano (vertical, ~900x1100)
+
+MIEMBROS
+Las fotos de los miembros van en img/miembros/ (cuadradas, mínimo 300x300).
+La lista de miembros se edita en js/miembros.js.
+
+VIDEO
+El video de presentación está en video/ameb-intro.mp4 y se ve debajo de "¿Qué es AMEB?".

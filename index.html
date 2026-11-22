@@ -44,6 +44,7 @@
     <symbol id="i-linkedin" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 10.5V17M8 7.5v.01M12 17v-6.5M12 13.5a2.5 2.5 0 0 1 5 0V17"/></symbol>
     <symbol id="i-instagram" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/></symbol>
     <symbol id="i-youtube" viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="4"/><path d="m10 9 5 3-5 3Z"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></symbol>
     <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
     <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></symbol>
   </svg>
@@ -68,6 +69,7 @@
           <li><a href="#inicio" class="nav__link">Inicio</a></li>
           <li><a href="#nosotros" class="nav__link">Nosotros</a></li>
           <li><a href="#membresia" class="nav__link">Membresía</a></li>
+          <li><a href="#miembros" class="nav__link">Miembros</a></li>
           <li><a href="#cebe" class="nav__link">CEBE</a></li>
           <li><a href="#recursos" class="nav__link">Recursos</a></li>
           <li><a href="#contacto" class="nav__link">Contacto</a></li>
@@ -81,7 +83,7 @@
     <!-- ===== Hero ===== -->
     <section class="hero" id="inicio">
       <div class="hero__media">
-        <img src="img/hero-endoscopio.jpg" alt="Médico sosteniendo un endoscopio en quirófano">
+        <img src="img/hero-endoscopio.jpg" alt="Especialistas de AMEB durante un entrenamiento de endoscopía">
       </div>
       <div class="container hero__content">
         <h1 class="hero__title reveal">
@@ -142,6 +144,13 @@
           <li class="pillar reveal"><h3>Innovación</h3><span>Clínica</span></li>
           <li class="pillar reveal"><h3>Comunidad</h3><span>Especializada</span></li>
         </ul>
+
+        <div class="video-player reveal">
+          <video controls playsinline preload="none" poster="img/video-poster.jpg">
+            <source src="video/ameb-intro.mp4" type="video/mp4">
+            Tu navegador no puede reproducir este video.
+          </video>
+        </div>
       </div>
     </section>
 
@@ -162,7 +171,7 @@
         <div class="carousel" tabindex="0" aria-label="Integrantes del consejo directivo">
           <article class="member-card reveal">
             <div class="member-card__photo" data-initials="CQ">
-              <img src="img/dr-cesar-quiroz.jpg" alt="Dr. César David Quiroz Guadarrama">
+              <img src="img/miembros/david-quiroz.jpg" alt="Dr. César David Quiroz Guadarrama">
             </div>
             <div class="member-card__body">
               <h3>Dr. César David<br>Quiroz Guadarrama</h3>
@@ -172,7 +181,7 @@
 
           <article class="member-card reveal">
             <div class="member-card__photo" data-initials="MR">
-              <img src="img/dr-martin-rojano.jpg" alt="Dr. Martín Edgardo Rojano Rodríguez">
+              <img src="img/miembros/martin-rojano.jpg" alt="Dr. Martín Edgardo Rojano Rodríguez">
             </div>
             <div class="member-card__body">
               <h3>Dr. Martín Edgardo<br>Rojano Rodríguez</h3>
@@ -216,6 +225,40 @@
       </div>
     </section>
 
+    <!-- ===== Directorio de miembros ===== -->
+    <section class="section members" id="miembros">
+      <div class="container">
+        <div class="members__head">
+          <div>
+            <h2 class="section-title reveal">Nuestros <em>miembros</em></h2>
+            <p class="section-lead reveal">Especialistas que forman parte de la Asociación Mexicana de Endoscopía Bariátrica.</p>
+          </div>
+          <div class="members__tools reveal">
+            <label class="members__search">
+              <span class="sr-only">Buscar miembro</span>
+              <svg class="icon icon--sm"><use href="#i-search"/></svg>
+              <input type="search" id="members-q" placeholder="Buscar por nombre o ciudad" autocomplete="off">
+            </label>
+            <label>
+              <span class="sr-only">Filtrar por especialidad</span>
+              <select id="members-filter">
+                <option value="">Todas las especialidades</option>
+              </select>
+            </label>
+          </div>
+        </div>
+
+        <p class="members__count" id="members-count" aria-live="polite"></p>
+        <ul class="members__grid" id="members-grid"></ul>
+        <p class="members__empty" id="members-empty" hidden>No encontramos miembros con esa búsqueda.</p>
+        <div class="members__more">
+          <button class="btn btn--outline" id="members-more" hidden>
+            Ver más miembros <svg class="icon icon--sm"><use href="#i-arrow-right"/></svg>
+          </button>
+        </div>
+      </div>
+    </section>
+
     <!-- ===== CEBE 2026 ===== -->
     <section class="split cebe" id="cebe">
       <div class="container">
@@ -246,7 +289,7 @@
       </div>
 
       <div class="split__media split__media--city">
-        <img src="img/hermosillo.jpg" alt="Catedral de Hermosillo y Cerro de la Campana al atardecer">
+        <img src="img/cebe.jpg" alt="Sesión magistral durante el CEBE">
       </div>
       <span class="split__arc" aria-hidden="true"></span>
     </section>
@@ -335,6 +378,7 @@
           <li><a href="#inicio">Inicio</a></li>
           <li><a href="#nosotros">Nosotros</a></li>
           <li><a href="#membresia">Membresía</a></li>
+          <li><a href="#miembros">Miembros</a></li>
           <li><a href="#cebe">CEBE</a></li>
           <li><a href="#recursos">Recursos</a></li>
           <li><a href="#contacto">Contacto</a></li>
@@ -426,6 +470,7 @@
     </form>
   </dialog>
 
+  <script src="js/miembros.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

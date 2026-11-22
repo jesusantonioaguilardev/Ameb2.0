@@ -364,6 +364,16 @@ button { font: inherit; cursor: pointer; }
   color: var(--blue);
 }
 
+.video-player {
+  margin-top: 80px;
+  aspect-ratio: 16 / 9;
+  border-radius: 20px;
+  overflow: hidden;
+  background: var(--navy-3);
+  box-shadow: 0 30px 60px rgba(14, 53, 88, .18);
+}
+.video-player video { width: 100%; height: 100%; object-fit: cover; display: block; }
+
 /* =========================================================
    Consejo directivo
    ========================================================= */
@@ -504,6 +514,106 @@ button { font: inherit; cursor: pointer; }
 }
 .benefit:nth-child(4n + 1) { border-left: 0; padding-left: 0; }
 .benefit .icon { color: #fff; }
+
+/* =========================================================
+   Directorio de miembros
+   ========================================================= */
+.members__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 32px;
+  margin-bottom: 36px;
+}
+.members__head > div:first-child { flex: 1; }
+.members__tools { display: flex; gap: 12px; flex-shrink: 0; }
+.members__tools input,
+.members__tools select {
+  height: 48px;
+  font: inherit;
+  font-size: 15px;
+  color: var(--ink);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: #fff;
+  transition: border-color .2s, box-shadow .2s;
+}
+.members__tools input:focus,
+.members__tools select:focus { outline: none; border-color: var(--gold); box-shadow: 0 0 0 3px rgba(195, 154, 74, .18); }
+.members__tools select { padding: 0 20px; max-width: 240px; text-overflow: ellipsis; }
+.members__search { position: relative; display: block; }
+.members__search .icon { position: absolute; left: 18px; top: 50%; transform: translateY(-50%); color: var(--muted); }
+.members__search input { width: 280px; padding: 0 20px 0 44px; }
+
+.members__count { margin-bottom: 20px; font-size: 14px; color: var(--muted); }
+
+.members__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+.member {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 32px 22px 28px;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  transition: box-shadow .3s var(--ease), transform .3s var(--ease);
+  animation: member-in .45s var(--ease) both;
+}
+.member:hover { box-shadow: var(--shadow); transform: translateY(-4px); }
+@keyframes member-in { from { opacity: 0; transform: translateY(12px); } }
+
+.member__photo {
+  position: relative;
+  width: 112px;
+  height: 112px;
+  margin-bottom: 20px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: linear-gradient(160deg, var(--bg-blue), #dbe4ee);
+  box-shadow: 0 0 0 4px #fff, 0 0 0 5.5px var(--gold-2);
+}
+.member__photo img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
+.member__photo.img-missing::after {
+  content: attr(data-initials);
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  font-size: 32px;
+  font-weight: 600;
+  color: var(--navy-2);
+  opacity: .5;
+}
+.member h3 { font-size: 17px; font-weight: 600; line-height: 1.3; color: var(--navy); }
+.member__role {
+  margin-top: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--gold-dark);
+}
+.member__spec { margin-top: 6px; font-size: 14px; color: var(--text); }
+.member__hospital { margin-top: 10px; font-size: 13px; font-weight: 500; color: var(--ink); }
+.member__city { margin-top: 2px; font-size: 13px; color: var(--muted); }
+
+.members__empty { padding: 48px 0; text-align: center; color: var(--muted); }
+.members__more { display: flex; justify-content: center; margin-top: 40px; }
+.members__more .btn[hidden] { display: none; }
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
 
 /* =========================================================
    Secciones divididas (CEBE y Contacto)
@@ -813,6 +923,7 @@ button { font: inherit; cursor: pointer; }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .js .reveal { opacity: 1; transform: none; transition: none; }
+  .member { animation: none; }
 }
 
 /* =========================================================
@@ -865,6 +976,9 @@ button { font: inherit; cursor: pointer; }
 
   .membership__head { flex-direction: column; align-items: flex-start; }
   .benefits { grid-template-columns: repeat(2, 1fr); }
+
+  .members__head { flex-direction: column; align-items: flex-start; }
+  .members__grid { grid-template-columns: repeat(2, 1fr); }
   .benefit:nth-child(4n + 1) { border-left: 1px solid rgba(255, 255, 255, .18); padding-left: 32px; }
   .benefit:nth-child(2n + 1) { border-left: 0; padding-left: 0; }
 
@@ -906,6 +1020,16 @@ button { font: inherit; cursor: pointer; }
   .benefit:nth-child(4n + 1) { flex-direction: row; align-items: center; border-left: 0; padding-left: 0; padding-right: 0; }
 
   .split__media { height: 300px; }
+
+  .members__tools,
+  .members__tools label,
+  .members__search input,
+  .members__tools select { width: 100%; max-width: none; }
+  .members__tools { flex-wrap: wrap; }
+  .members__grid { gap: 14px; }
+  .member { padding: 24px 12px 20px; }
+  .member__photo { width: 84px; height: 84px; margin-bottom: 14px; }
+  .member h3 { font-size: 15px; }
 
   .highlight { font-size: 15px; }
   .icon--xl { width: 46px; height: 46px; }
