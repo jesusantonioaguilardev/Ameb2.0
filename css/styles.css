@@ -455,18 +455,6 @@ button { font: inherit; cursor: pointer; }
 }
 .member-card__body p { margin-top: 6px; color: var(--gold-dark); font-size: 15px; }
 
-.member-card--soon {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 22px;
-  padding: 40px 30px;
-  background: var(--bg-blue);
-  border-color: transparent;
-  color: var(--blue);
-}
-.member-card--soon p { color: var(--ink); font-size: 16px; line-height: 1.55; max-width: 200px; }
 
 /* =========================================================
    Membresía

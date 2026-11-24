@@ -19,7 +19,7 @@ window.AMEB_MIEMBROS = [
     especialidad: 'Cirugía Bariátrica y Endoscopia Gastrointestinal',
     hospital: 'Hospital San Angel Inn HMG Coyoacán',
     ciudad: 'Ciudad de México, México',
-    cargo: 'Vicepresidente',
+    cargo: 'Miembro del Consejo',
     foto: 'img/miembros/martin-rojano.jpg',
   },
   {
@@ -27,6 +27,7 @@ window.AMEB_MIEMBROS = [
     especialidad: 'Cirugía Bariátrica y Endoscopia Gastrointestinal',
     hospital: 'Centro Médico ABC Santa Fe',
     ciudad: 'Ciudad de México, México',
+    cargo: 'Miembro del Consejo',
     foto: 'img/miembros/carlos-valenzuela.jpg',
   },
   {
@@ -34,6 +35,7 @@ window.AMEB_MIEMBROS = [
     especialidad: 'Cirugía Bariátrica y Endoscopia Gastrointestinal',
     hospital: 'Hospital MAC Guadalajara - Bernardette',
     ciudad: 'Guadalajara, Jalisco, México',
+    cargo: 'Miembro del Consejo',
     foto: 'img/miembros/griselda-galvez.jpg',
   },
   {
@@ -41,6 +43,7 @@ window.AMEB_MIEMBROS = [
     especialidad: 'Cirugía Bariátrica y Endoscopia Gastrointestinal',
     hospital: 'Clínica OD',
     ciudad: 'Poza Rica de Hidalgo, Veracruz, México',
+    cargo: 'Miembro del Consejo',
     foto: 'img/miembros/carlos-orellana.jpg',
   },
   {
@@ -48,6 +51,7 @@ window.AMEB_MIEMBROS = [
     especialidad: 'Cirugía Bariátrica y Endoscopia Gastrointestinal',
     hospital: 'Edificio Médico Las Lomas',
     ciudad: 'Monterrey, Nuevo León, México',
+    cargo: 'Miembro del Consejo',
     foto: 'img/miembros/cesar-sepulveda.jpg',
   },
   {
@@ -55,6 +59,7 @@ window.AMEB_MIEMBROS = [
     especialidad: 'Cirugía Bariátrica y Endoscopia Gastrointestinal',
     hospital: 'Hospital Manedic Texcoco',
     ciudad: 'Ciudad de México, México',
+    cargo: 'Miembro del Consejo',
     foto: 'img/miembros/manuel-cervantes.jpg',
   },
   {
@@ -62,6 +67,7 @@ window.AMEB_MIEMBROS = [
     especialidad: 'Profesor internacional de Endoscopia Bariátrica',
     hospital: 'Hospital Universitario HM Sanchinarro',
     ciudad: 'Madrid, España',
+    cargo: 'Miembro del Consejo',
     foto: 'img/miembros/gontrand-lopez-nava.jpg',
   },
 ];
